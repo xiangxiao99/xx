@@ -1,0 +1,11 @@
+
+  public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException {
+      request.setCaracterEncoding(“gb2312”);//汉字转码
+      PrintWriter out = response.getWriter();
+      out.println("The Parameter are ："+request.getParameter("name1"));
+  }
+
+  public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException {
+      this.goGet(request,response);
+  }
+}
